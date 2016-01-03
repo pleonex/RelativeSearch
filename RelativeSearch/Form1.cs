@@ -38,6 +38,8 @@ namespace RelativeSearch
             InitializeComponent();
             comboEnc.SelectedIndex = 0;
 			comboCharSize.SelectedIndex = 0;
+            if (Environment.GetCommandLineArgs().Length > 1)
+                txtEntry.Text = Environment.GetCommandLineArgs()[1];
         }
 
         private void txtEntryTextChanged(object sender, EventArgs e)
